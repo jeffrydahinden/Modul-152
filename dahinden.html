@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dahinden</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<button class="btn btn-dark" onclick="window.location.href = 'http://10.1.45.12/'">&laquo;Zurück</button>
+<div class="container text-center">
+  <h1 class="mt-5">Jeffry Dahinden</h1>
+  <div class="row mb-5">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <ul class="list-group mt-2">
+        <li class="list-group-item">Name: Jeffry Dahinden</li>
+        <li class="list-group-item">Beruf: Informatiker Applikationsentwickler</li>
+        <li class="list-group-item">Schule: TBZ</li>
+        <li class="list-group-item">Betrieb: Raiffeisen</li>
+        <li class="list-group-item">Hobbys: Videos erstellen</li>
+      </ul>
+    </div>
+    <div class="col-md-3"></div>
+<audio controls>
+  <source src="https://www.youtube.com/watch?v=CDl5MK6MClg" type="audio/mpeg">
+</audio>
+  </div>
+  <iframe width="966" height="543" src="https://www.youtube.com/embed/e3XNvWxRrXI" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+  <img width="1000px" class="mt-5" id="slider" src="https://imgr1.auto-motor-und-sport.de/SPERRFRIST-17-2-21-00-15-Uhr-McLaren-Artura-Supercar-Hybrid-bigMobileWide-3cf86f61-1765990.jpg" alt="Italian Trulli"> 
+<button class="btn btn-dark" id="pressButton">Press</button>  
+<script>
+    let counter = 0;
+    function changeImage() {
+      let list = [
+        "https://cdn.motor1.com/images/mgl/7xNMo/s1/bulletproof-ferrari-458-speciale-by-addarmor-front-view.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/18/Lamborghini_Sian_at_IAA_2019_IMG_0332.jpg",
+        "https://imgr1.auto-motor-und-sport.de/SPERRFRIST-17-2-21-00-15-Uhr-McLaren-Artura-Supercar-Hybrid-bigMobileWide-3cf86f61-1765990.jpg",
+      ];
+      document.getElementById("slider").src = list[counter];
+      counter++;
+      if (counter === 3) {
+        counter = 0;
+      }
+    }
+    let button = document.getElementById("pressButton");
+    button.addEventListener("click", changeImage);
+  </script>
+</div>
+
+</body>
+</html>
+

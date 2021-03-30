@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dahinden</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<button class="btn btn-dark" onclick="window.location.href = 'http://10.1.45.12/'">&laquo;Zurück</button>
+
+<div class="container">
+  <button id="button" class="btn btn-primary">Press Me</button>
+  <script>
+    let counter = 0;
+    function addElement() {
+      counter++;
+      let titleElement = document.createElement("h1");
+      titleElement.innerHTML = "Hello";
+      titleElement.style.color = "red";
+      document.body.appendChild(titleElement);
+
+      let textElement = document.createElement("p");
+      textElement.innerHTML = "it never ends....";
+      textElement.style.color = "blue";
+      document.body.appendChild(textElement);
+
+      showCounter();
+    }
+
+    function showCounter() {
+      if (counter === 3) {
+        let counterElement = document.createElement("h1");
+        counterElement.innerHTML = counter;
+        counterElement.style.color = "yellow";
+        document.body.appendChild(counterElement);
+      }
+      if (counter === 100) {
+        let counterElement = document.createElement("h1");
+        counterElement.innerHTML = counter;
+        counterElement.style.color = "yellow";
+        document.body.appendChild(counterElement);
+      }
+      if (counter === 150) {
+        let counterElement = document.createElement("h1");
+        counterElement.innerHTML = counter;
+        counterElement.style.color = "yellow";
+        document.body.appendChild(counterElement);
+      }
+      if (counter === 200) {
+        let counterElement = document.createElement("h1");
+        counterElement.innerHTML = counter;
+        counterElement.style.color = "yellow";
+        document.body.appendChild(counterElement);
+      }
+    }
+    let button = document.getElementById("button");
+    button.addEventListener("click", addElement);
+    document.addEventListener("scroll", addElement);
+  </script>
+</div>
+</body>
+</html>
+
